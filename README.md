@@ -1,21 +1,30 @@
 # MediVault — Care Management
 
-A responsive healthcare record-management starter with a professional SaaS interface and a small Node.js API.
+A modern, responsive healthcare care management web application built purely with **HTML5, CSS3, and JavaScript**. Zero backend dependencies or installations required.
 
-## Project structure
-- `frontend/` — dependency-free responsive web interface.
-- `backend/server.js` — built-in Node.js HTTP API for patients, medical records, appointments and prescriptions.
-- `dsa/` — reserved for existing course/project algorithm work.
+## Features
+- **Zero Dependencies**: Pure standard HTML, CSS, and vanilla JavaScript.
+- **Client-Side Persistence**: Automatic `localStorage` support — all patient profiles, medical records, appointments, and prescriptions persist across refreshes.
+- **Dynamic Analytics Dashboard**:
+  - Live KPI metric cards (Patients, Records, Appointments today, Prescriptions).
+  - SVG Care activity trend chart calculated dynamically over the last 7 days.
+  - Interactive SVG/Conic category distribution donut chart.
+- **Full Patient Management**: Search, filter, view complete patient medical history, add new profiles, and export to CSV.
+- **Medical Records**: Clinical notes, diagnostic lab results, imaging reports, and discharge summaries.
+- **Appointment Scheduling**: Status tracking (Scheduled, Pending, Cancelled) and calendar date/time management.
+- **Prescription Tracking**: Detailed dosages, administration instructions, and prescribing physician records.
+- **Sample Data Included**: Comes preloaded with realistic sample data, plus a "Reset sample data" button.
 
-## Run
-Open `frontend/index.html` in a browser to use the frontend. For the API, use Node.js 18+:
+## How to Run
+Simply open `index.html` in any modern web browser:
 
-```bash
-node backend/server.js
-```
+- **Direct file**: Double-click `index.html`.
+- **VS Code Live Server**: Right-click `index.html` -> "Open with Live Server" (`http://localhost:5500`).
+- **GitHub Pages**: Fully compatible with GitHub Pages out of the box.
 
-Health check: `GET http://localhost:4000/api/health`
-Collections: `GET /api/patients`, `/api/records`, `/api/appointments`, `/api/prescriptions`. `POST` creates a record; `DELETE /api/{collection}/{id}` removes one.
-
-## Important limitations
-This package is a starter implementation, not a production-ready medical-record system. The frontend stores records in page memory only and is not yet connected to the API. The API stores data in memory and resets on restart; it has no authentication, authorization, durable database, audit trail, or encryption at rest. Do not use real patient information until these controls are implemented and independently reviewed. Configure `CORS_ORIGIN` for the intended frontend origin before deployment.
+## Project Structure
+- `index.html` — Main single-page application shell.
+- `styles.css` — Modern healthcare SaaS styling, glassmorphism, responsive grid & mobile navigation.
+- `app.js` — Client-side state machine, data models, charts, modals, and local persistence.
+- `frontend/` — Mirrored standalone frontend assets.
+- `dsa/` — Project algorithms and reference material.

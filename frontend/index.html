@@ -1,4 +1,87 @@
-<!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0e7490"><title>MediVault | Care, clearly organized</title><link rel="stylesheet" href="styles.css"></head><body>
-<div class="app-shell"><aside class="sidebar" id="sidebar"><a class="brand" href="#dashboard"><span class="brand-mark">✚</span><span>MediVault<small>CARE MANAGEMENT</small></span></a><div class="nav-label">WORKSPACE</div><nav id="nav"><button class="nav-item active" data-page="dashboard"><span>▦</span> Overview</button><button class="nav-item" data-page="patients"><span>♙</span> Patients</button><button class="nav-item" data-page="records"><span>▤</span> Medical records</button><button class="nav-item" data-page="appointments"><span>◷</span> Appointments</button><button class="nav-item" data-page="prescriptions"><span>⚕</span> Prescriptions</button></nav><div class="sidebar-bottom"><div class="privacy-note"><span class="shield">✓</span><div><strong>Privacy first</strong><p>Keep care information protected.</p></div></div><div class="profile"><div class="avatar">MV</div><div><strong>Care team</strong><small>Workspace</small></div><span class="profile-dots">•••</span></div></div></aside>
-<main class="main"><header class="topbar"><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button><div class="breadcrumbs">Workspace <span>/</span> <strong id="crumb">Overview</strong></div><div class="top-actions"><span class="secure"><i></i> Secure workspace</span><button class="icon-btn" title="Notifications" aria-label="Notifications">♧</button><div class="avatar small">MV</div></div></header><section class="content" id="content"></section><footer> <span>© 2026 MediVault</span><span>Patient information should be handled with care.</span></footer></main></div><div id="toast" class="toast" role="status"></div><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e7490">
+  <meta name="description" content="MediVault — Modern, secure, client-side healthcare care management interface.">
+  <title>MediVault | Care Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" data-page="dashboard">
+        <span class="brand-mark">✚</span>
+        <span>MediVault<small>CARE MANAGEMENT</small></span>
+      </a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav id="nav">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> Overview</button>
+        <button class="nav-item" data-page="patients"><span>♙</span> Patients</button>
+        <button class="nav-item" data-page="records"><span>▤</span> Medical records</button>
+        <button class="nav-item" data-page="appointments"><span>◷</span> Appointments</button>
+        <button class="nav-item" data-page="prescriptions"><span>⚕</span> Prescriptions</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="storage-card">
+          <div class="storage-title">
+            <span class="pulse-dot"></span>
+            <strong>Client Storage</strong>
+          </div>
+          <p>Data is stored locally in your browser (LocalStorage). No external server required.</p>
+          <button class="btn-text" id="resetDemoBtn" title="Reset sample patients and records">Reset sample data</button>
+        </div>
+        <div class="privacy-note">
+          <span class="shield">✓</span>
+          <div>
+            <strong>Privacy Protected</strong>
+            <p>100% browser-based record storage.</p>
+          </div>
+        </div>
+        <div class="profile">
+          <div class="avatar">MV</div>
+          <div>
+            <strong>Care Team</strong>
+            <small>Local Workspace</small>
+          </div>
+          <span class="profile-dots">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+          <div class="breadcrumbs">
+            <span>Workspace</span>
+            <span class="sep">/</span>
+            <strong id="crumb">Overview</strong>
+          </div>
+        </div>
+        <div class="top-actions">
+          <span class="secure"><i></i> Offline-Ready &amp; Private</span>
+          <button class="btn sm" id="quickAddBtn" data-action="add-patient">+ Quick Add</button>
+          <div class="avatar small">MV</div>
+        </div>
+      </header>
+
+      <section class="content" id="content" aria-live="polite"></section>
+
+      <footer>
+        <span>© 2026 MediVault · Pure HTML5, CSS3 &amp; Modern JavaScript</span>
+        <span>Patient health information stored securely in client browser.</span>
+      </footer>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="assertive"></div>
+  <script src="app.js"></script>
+</body>
+</html>
